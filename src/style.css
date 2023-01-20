@@ -1,0 +1,211 @@
+@font-face {
+    font-family: testFont;
+    src: url(./fonts/italiana-regular.otf);
+  }
+
+body {
+    background-size:cover;
+    background-position: center;
+    background-image: url(./images/italian-cuisine.jpg);
+    background-attachment: fixed;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:4px;
+    color: white;
+}
+
+#content {
+    display:flex;
+    align-items: center;;
+    flex-direction: column;
+    gap:16px;
+    border-radius:4px 50px 4px 50px;
+    margin:12px;
+    min-height:100vh;
+    height:auto;
+    max-width:min(660px,80vw);
+    background-color: rgba(0,0,0,0.75);
+    padding:20px;
+    padding-left:30px;
+    padding-right:30px;
+}
+
+#logo {
+    font-family: testFont;
+    font-size: 50px;
+    border-right: 1px;
+    border-bottom: 1px;
+    border-style:solid;
+}
+
+#nav {
+    display:flex;
+    gap:16px;
+    font-family: testFont;
+    font-size: 1.5rem;
+    border-bottom:1px;
+    border-style:solid;
+    padding-bottom:16px;
+    height: 24px;
+    justify-content: space-between;
+    width: 260px;
+}
+
+.nav-item {
+    cursor: pointer;
+    height: auto;
+}
+
+.nav-item:hover {
+    font-size:1.67rem;
+}
+
+#about-us {
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+    align-items: center;
+    
+    font-size:1.1rem;
+    line-height: 1.6rem;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+#about-us-title {
+    font-size:1.2rem;
+    
+}
+
+.about-us-text {
+    text-align: justify;
+    max-width:480px;
+}
+
+#bg-image-credit {
+    margin:auto;
+    background-color: black;
+}
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    gap:32px;
+}
+
+.menu-category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:24px;
+    font-size: 1.8rem;
+    margin:12px;
+}
+
+.menu-card {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: 1rem;
+    border-radius: 12px;
+    padding: 12px;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.menu-text {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 200px);
+    justify-content: space-around;
+    align-items: center;
+    padding:24px;
+    gap:16px;
+}
+
+.item-title {
+    font-size: 1.4rem;
+}
+
+.item-desc {
+    font-size: 1.1rem;
+    max-width: 90%;
+    text-align: center;
+}
+
+.item-price {
+    font-size: 1.3rem;
+}
+
+.menu-img {
+    max-width:200px;
+    cursor: pointer;
+}
+
+@media (max-width: 500px) {
+    #content {
+        padding-left:0px;
+        padding-right:0px;
+        width:96vw;
+        max-width:96vw;
+        margin:auto;
+        margin-top:16px;
+    }
+
+    .item-desc {
+        font-size: 1.1rem;
+    }
+
+    .item-price {
+        font-size: 1.15rem;
+    }
+
+    .menu-img {
+        max-width: 60px;
+        max-height: 60px;
+    }
+
+    .menu-text {
+        padding:4px;
+        width: calc(100% - 60px);
+    }
+
+    .menu-card {
+        padding:4px;
+        height:auto;
+    }
+
+    img {
+        max-width: 90vw;
+    }
+
+    iframe {
+        max-width: 90vw;
+        max-height: 90vw;
+    }
+
+    .about-us-text {
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+}
+
+#lightbox {
+    position: fixed;
+    left:0;
+    top:0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.8);
+    display: none;
+}
+
+#lightbox.active {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fullsize {
+    width: 300px;
+}
